@@ -1,0 +1,94 @@
+body{
+    border:1px solid #dadada;
+    background-color: #fff;
+    font-family: 'suecaslabmedium', Georgia;
+
+}
+
+.container{
+    padding-bottom: 10px;
+}
+
+
+h1{
+    font-family: 'suecaslabthin', Georgia; 
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.page-header {
+    padding-bottom: 20px;
+    margin: 30px 0 20px;
+    border-bottom: 0px;
+}
+
+.panel-default>.panel-heading {
+    background-color: #e2f6ff;
+    text-transform: uppercase;
+    font-family: 'suecaslabbold', Georgia; 
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #0084B4;
+    border-color: #0084B4;
+    text-transform: uppercase;
+    border-radius: 100px;
+    padding: 6px 32px;
+}
+
+label{
+    font-weight: normal;
+}
+
+.help-block{
+   margin-top: -10px;
+    margin-bottom: 10px;
+    color: #a9a9a9;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#sueldoEnMano{
+    font-size: 40px;
+}
+
+#impuestoAnual, #impuestoMensual, #alicuota, #alicuotaMarginal {
+        padding-bottom: 8px;
+    border-bottom: 1px dotted #dadada;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+footer{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;.
+    padding-top: 30px;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+footer p{
+    width: 100%;
+}
+
+footer p a{
+    display: inline-block;
+}
+
+@media screen and (max-width: 640px) {
+    .page-header {
+        padding-bottom: 20px;
+        margin: 20px 0 0px;
+        border-bottom: 0px;
+        line-height: 1.2;
+        font-size: 24px;
+    }
+
+}
+

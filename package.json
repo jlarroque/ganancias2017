@@ -1,0 +1,32 @@
+{
+  "name": "calculadora-ganancias2018",
+  "version": "1.0.0",
+  "description": "Calculadora de Ganancias 2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compress": "uglifyjs --compress --mangle -- js/calc.js > js/calc.min.js",
+    "watch": "node server",
+    "start": "lr-http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanacioncom/ganancias2017.git"
+  },
+  "keywords": [
+    "javascript",
+    "calculadora",
+    "ganancias",
+    "2018"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanacioncom/ganancias2017/issues"
+  },
+  "homepage": "https://github.com/lanacioncom/ganancias2017#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}

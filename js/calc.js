@@ -6,6 +6,7 @@ function calcular() {
         valorAlquiler = $("#alquiler").val(),
         deduccionAlquiler = 12 * valorAlquiler * .4 > TOPE_ALQUILER ? TOPE_ALQUILER : 12 * valorAlquiler * .4,
         valorHipotecario = $("#hipotecario").val(),
+        servicio_domestico = $("#servicio-domestico").val(),
         deduccionHipotecario = 12 * valorHipotecario > TOPE_HIPOTECARIO ? TOPE_HIPOTECARIO : 12 * valorHipotecario,
 		hijosElement = document.getElementById("hijos"),
         cantHijos = hijosElement.options[hijosElement.selectedIndex].value,
@@ -28,6 +29,9 @@ function calcular() {
     $("#alicuotaMarginal").text(alicuotaMarginal.toFixed(2) + "%");
     var sueldoEnMano = sueldoNeto - impuestoMensual;
     $("#sueldoEnMano").text("$" + Math.round(sueldoEnMano) + ".00")
+
+    console.log(servicio-domestico);
+    
 }
 
 function calcularImpuesto(monto) {
