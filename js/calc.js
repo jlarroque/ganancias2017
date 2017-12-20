@@ -6,9 +6,8 @@ function calcular() {
         valorAlquiler = $("#alquiler").val(),
         deduccionAlquiler = 12 * valorAlquiler * .4 > TOPE_ALQUILER ? TOPE_ALQUILER : 12 * valorAlquiler * .4,
         valorHipotecario = $("#hipotecario").val(),
-        servicio_domestico = $("#servicio-domestico").val(),
         deduccionHipotecario = 12 * valorHipotecario > TOPE_HIPOTECARIO ? TOPE_HIPOTECARIO : 12 * valorHipotecario,
-		hijosElement = document.getElementById("hijos"),
+        hijosElement = document.getElementById("hijos"),
         cantHijos = hijosElement.options[hijosElement.selectedIndex].value,
         sueldoNeto = 0 == isJubilado ? .17 * sueldoBruto > TOPE_APORTES ? sueldoBruto - TOPE_APORTES : .83 * sueldoBruto : .06 * sueldoBruto > TOPE_APORTES ? sueldoBruto - TOPE_APORTES : .94 * sueldoBruto;
 
@@ -29,9 +28,6 @@ function calcular() {
     $("#alicuotaMarginal").text(alicuotaMarginal.toFixed(2) + "%");
     var sueldoEnMano = sueldoNeto - impuestoMensual;
     $("#sueldoEnMano").text("$" + Math.round(sueldoEnMano) + ".00")
-
-    console.log(servicio-domestico);
-    
 }
 
 function calcularImpuesto(monto) {
@@ -74,4 +70,4 @@ var topesEscalas = [25800, 51600, 77400, 103200, 154800, 206400, 309600, 412800,
     TOPE_APORTES = 13926.16,
     TOPE_JUBILADO = 407592, 
     TOPE_ALQUILER = 51967,
-	TOPE_HIPOTECARIO = 20000;
+    TOPE_HIPOTECARIO = 20000;

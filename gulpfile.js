@@ -1,5 +1,7 @@
 var gulp = require('gulp'),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  uglify = require('gulp-uglify'),
+  rename = require("gulp-rename");
 
 
 /** server */
@@ -23,15 +25,16 @@ gulp.task('html', function () {
 
 gulp.task('css', function () {
   gulp.src('./pages/**/*.css')
-    .pipe(gulp.dest("dist"))
-    // .pipe(connect.reload());
+    .pipe(gulp.dest("dist"));
+
 });
 
 gulp.task('js', function () {
   gulp.src('./js/calc.js')
-  //minifi js
-    .pipe(gulp.dest("dist"))
-    // .pipe(connect.reload());
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest("dist/js"));
+
 });
 
 
@@ -43,4 +46,4 @@ gulp.task('copy-bower', function () {
 
 
 /** default */
-gulp.task('default', ['copy-bower', 'css', 'connect', 'watch']);
+gulp.task('default', ['copy-bower', 'html', 'css', 'js', 'connect', 'watch']);
